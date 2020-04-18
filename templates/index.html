@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="estilo.css" text="text/css" />
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <h1> Calculadora de Carbono </h1>
+</head>
+
+
+<style type="text/css">
+    div.a {
+        text-align: center;
+        color: white;
+        font-size: large;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+    body {
+        background-color: #408080;
+
+    }
+
+    input {
+        display: block;
+        margin-left: 580px;
+        margin-top:5px
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+
+    .alert {
+
+        color: white;
+        text-align: center;
+    }
+
+    img {
+        align-items: center;
+        margin-left: 630px;
+        margin-bottom: 50px;
+    }
+</style>
+
+<body>
+    <div>
+        <img id="ola" src="../static/img/calc.png">
+    </div>
+
+
+
+    <div class="a">
+        <form action="/result" method="POST">
+
+
+            <div>
+                <label for="Variavel1"> (KWh/Mês) - Energia gasta por Mes</label>
+                <input type="number" placeholder=" Digite o valor ..." class="u-full-width" name="Variavel1" />
+            </div>
+
+            <p>
+                <label for="Variavel2">Consumo de Gás de Cozinha (Kg/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel2" />
+            </p>
+
+            <p>
+                <label for="Variavel3">Consumo de Gás Natural (M³/Mês) </label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel3" />
+            </p>
+
+            <p>
+                <label for="Variavel4">Veículo Pequeno (até 1.4L) (Km/Mês)</label>
+                <input type="number" placeholder="Digite ..." class="u-full-width" name="Variavel4" />
+            </p>
+
+            <p>
+                <label for="Variavel5">Veículo Médio (de 1.5L a 2.0L) (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel5" />
+            </p>
+
+            <p>
+                <label for="Variavel6">Veículo Grande (superior a 2.0L) (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel6" />
+            </p>
+
+            <p>
+                <label for="Variavel7">Motocicletas (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel7" />
+            </p>
+
+            <p>
+                <label for="Variavel8">Veículo Pequeno (até 1.4L) (Km/Mês)</label>
+                <input type="number" placeholder="Digite
+          
+            ..." class="u-full-width" name="Variavel8" />
+            </p>
+
+            <p>
+                <label for="Variavel9">Veículo Médio (de 1.5L a 2.0L) (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel9" />
+            </p>
+            <p>
+
+                <label for="Variavel10">Veículo Grande (superior a 2.0L) (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel10" />
+            </p>
+
+            <p>
+                <label for="Variavel11">Carro (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel11" />
+            </p>
+
+            <p>
+                <label for="Variavel12">Ônibus Urbano (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel12" />
+            </p>
+
+            <p>
+                <label for="Variavel13">Ônibus Rodovia (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel13" />
+            </p>
+
+            <p>
+                <label for="Vartiavel14">Carro movido a GNV (Km/Mês)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel14" />
+            </p>
+
+            <p>
+                <label for="Variavel15">Viagens Nacionais (Por ano)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel15" />
+            </p>
+
+            <p>
+                <label for="Variavel16">Viagens Internacionais (Por ano)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel16" />
+            </p>
+
+            <p>
+                <label for="Variavel17">Quantidade de resíduos gerados (Por dia)</label>
+                <input type="number" placeholder="Digite o valor ..." class="u-full-width" name="Variavel17" />
+            </p>
+
+            <input type="submit" value="Calcular" id="calcular_btn" />
+
+
+            <div class="alert">
+                <label for="sum">RESULTADO:</label>
+                {{ sum }}
+            </div>
+
+</body>
+
+</html>
